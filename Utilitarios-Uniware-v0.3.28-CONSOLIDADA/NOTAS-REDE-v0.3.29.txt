@@ -1,0 +1,28 @@
+UTILITARIO UNIWARE v0.3.29 - MODULO DE REDE
+
+ARQUIVO NOVO
+- Rede-Uniware.ps1
+
+ALTERACOES
+- Diagnostico de interfaces fisicas ativas.
+- Benchmark de DNS com media/min/max e falhas.
+- Selecao automatica do DNS com menor media medida.
+- Backup JSON da configuracao anterior.
+- Configuracao de IPv4 fixo com validacao de ate 30 segundos.
+- Rollback automatico se gateway/internet/HTTPS nao forem validados.
+- Restauracao da ultima configuracao salva.
+- Restauracao completa para DHCP + DNS automatico.
+- Logs em LOGS\REDE.
+- Integracao com o menu console e a GUI.
+
+IMPORTANTE
+O benchmark mede a rede atual. O DNS mais rapido pode mudar conforme a rede, provedor e local. DNS nao reduz diretamente o ping de jogos; ele afeta principalmente a resolucao de nomes.
+
+TESTES RECOMENDADOS
+1. Abrir como administrador.
+2. Rede -> Diagnostico.
+3. Rede -> Testar DNS.
+4. Rede -> IP fixo seguro.
+5. Usar um IP livre da mesma sub-rede e o gateway correto.
+6. Confirmar que o teste mantem a internet.
+7. Testar Restaurar DHCP em uma maquina de laboratorio antes de uso operacional.

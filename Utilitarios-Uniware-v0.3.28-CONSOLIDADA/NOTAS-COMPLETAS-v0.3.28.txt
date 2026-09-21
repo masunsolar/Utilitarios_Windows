@@ -1,0 +1,119 @@
+UTILITARIOS UNIWARE v0.3.28
+NOTAS COMPLETAS DA VERSAO CONSOLIDADA
+
+OBJETIVO
+Centralizar em uma interface responsiva as rotinas usadas pela equipe tecnica para
+configurar computadores, localizar e instalar impressoras, baixar ferramentas,
+gerenciar o Windows e diagnosticar problemas comuns de atendimento.
+
+INTERFACE
+- Interface grafica em Windows Forms com barra lateral e paginas Inicio,
+  Impressoras, Drivers, UnilabNuvem, Utilitarios, Computador e Historico.
+- Cartoes responsivos, ajuste para escala de DPI e textos dimensionados para evitar cortes.
+- Menu classico preservado em Abrir-Menu-Classico.bat.
+- Acoes tecnicas continuam em consoles separados para exibir progresso e diagnosticos.
+
+IMPRESSORAS E REDE
+- Busca de impressoras graficas por IP.
+- Busca especializada de impressoras termicas e teste RAW na porta TCP 9100.
+- Deteccao e configuracao de dispositivos locais USB e COM.
+- Instalacao de fila TCP/IP com consulta de driver e porta.
+- Exibicao de evidencias do equipamento e niveis de confianca durante a busca.
+
+DRIVERS DE IMPRESSORAS GRAFICAS
+- Secoes para HP, Epson, Brother, Canon, Lexmark, Kyocera, Ricoh e Pantum.
+- HP Smart Tank 580, DeskJet 2800, Laser MFP 130/135, Laser 100/107,
+  LaserJet Pro P1102w/P1100 e Laser 408/408dn.
+- Epson EcoTank L3150 e L3250.
+- Brother HL-1200, DCP-T720DW e DCP-L2540DW.
+- Lexmark MX510de e familia MX510.
+- Canon, Kyocera, Ricoh e Pantum direcionadas para as centrais oficiais de drivers.
+- Remocao separada de fila de impressao e driver do fabricante.
+- Uma fila pode ser removida preservando driver e porta.
+- Drivers em uso por alguma fila ficam protegidos contra remocao.
+- Confirmacao REMOVER e logs em LOGS\REMOCAO_IMPRESSORAS.
+
+IMPRESSORAS DE CUPOM
+- Epson TM-T20/TM-T20II, Elgin i7/i8/i9 e Bematech MP-4200.
+- Downloads com progresso na mesma linha, tamanho total e velocidade.
+- Validacao do arquivo antes de executar ou extrair.
+
+ETIQUETADORAS E DRIVERS
+- Zebra Setup Utilities.
+- Driver Elgin L42 Pro.
+- TOMATE MDK-20744 pelo pacote informado.
+- Driver universal Xprinter Seagull 2023.2 baixado pela GitHub Release.
+- Validacao de ZIP, SHA-256 e assinatura do instalador Xprinter.
+- Exemplos Xprinter: XP-410B, XP-420B, XP-450B, XP-460B, XP-480B,
+  XP-D361B, XP-D461B, XP-T4501B e XP-TT428B.
+
+CALIBRACAO DE ETIQUETADORAS
+- Guia interno para GAP, marca preta, papel continuo, termica direta e ribbon.
+- Perfis de laboratorio de 40, 50 e 60 mm de largura por 25, 30 e 40 mm de altura.
+- Tamanho personalizado entre 40-60 mm de largura e 25-40 mm de altura.
+- TSPL/TSPL2 para Xprinter e TOMATE, incluindo GAPDETECT e BLINEDETECT.
+- ZPL para Zebra TLP 2844-Z, GC420d/GC420t, ZD220d/ZD220t e ZD230d/ZD230t.
+- ZPL para Elgin L42, L42 Pro, L42 Pro Full e L42DT quando a emulacao ZPL estiver ativa.
+- Zebra TLP 2844 sem sufixo Z tratada como EPL com calibracao manual orientada.
+- Argox OS-214, OS-214plus, OS-214 Pro e OS-214EX com calibracao manual orientada.
+- Modelos exclusivamente termicos diretos bloqueiam automaticamente o uso de ribbon.
+- Ajustes de velocidade, intensidade, orientacao, sensor e metodo de impressao.
+- Confirmacao numerica antes do envio RAW e etiqueta de teste no protocolo correto.
+- Logs em LOGS\ETIQUETADORAS.
+
+USUARIO, CREDENCIAIS E SPOOLER
+- Criacao ou atualizacao do usuario local Unilabimp.
+- Opcao de senha sugerida ou senha escolhida pelo tecnico.
+- Senha personalizada digitada de forma oculta e confirmada antes da aplicacao.
+- Senha sugerida ofuscada em Base64 e omitida dos logs.
+- Inclusao no grupo local de usuarios por SID, independente do idioma do Windows.
+- Controle total na pasta System32\spool\PRINTERS para Unilabimp e Todos/Everyone.
+- Identidades resolvidas por SID em Windows portugues ou ingles.
+- Criacao de credencial persistente do Windows para um computador remoto.
+- Listagem de usuarios locais e remocao seletiva com contas protegidas.
+
+FERRAMENTAS UNIWARE
+- Download e execucao do Unilab RustDesk com tentativa de prioridade alta.
+- Download e execucao do Unilab Nuvem 0.1.55.
+- Painel de Senhas com Painel Lancador, UniSenhas, UniCheckin e TesteBotoeira.
+- Opcao Baixar Todos; pacotes ZIP sao validados e extraidos.
+- Arquivos parciais sao removidos em falhas.
+
+WINDOWS E MANUTENCAO
+- Instalacao ou atualizacao do Winget.
+- Limpeza, energia, memoria, restauracao e historico de manutencao.
+- Desativacao de UAC com backup dos valores anteriores e confirmacao 1/0.
+- Consulta, desativacao e reativacao dos perfis Domain, Private e Public do Firewall.
+- Criacao e validacao de regras TCP/UDP para portas, listas e intervalos.
+- Separacao entre regra criada e programa realmente escutando a porta.
+- Diagnosticos de administrador, NetSecurity, BFE e MpsSvc.
+- Mensagem, categoria, ID e HRESULT apresentados nas falhas do Windows.
+
+DOWNLOADS
+- Barra de progresso atualizada na mesma linha.
+- Percentual, baixado/total, velocidade e tempo total.
+- Blocos e buffers de 1 MB, acesso sequencial e conexao persistente.
+- Validacao de cabecalho para EXE e ZIP antes de uso.
+
+NOVO NA v0.3.28
+- Diagnostico Validar-Ambiente.bat para uso antes do atendimento.
+- Relatorio de Windows, administrador, PowerShell, Spooler, modulos e Winget.
+- Inventario de filas, drivers, portas e tipo de conexao USB/COM, TCP/IP ou compartilhada.
+- Teste TCP 9100 para portas de rede identificadas.
+- Teste de disponibilidade dos principais downloads.
+- Relatorio salvo em LOGS\VALIDACAO.
+- Enderecos provisiorios de Canon, Kyocera, Ricoh e Pantum substituidos por suporte oficial.
+- Manual do Tecnico em DOCX e PDF incluido no pacote.
+
+VALIDACAO DESTA ENTREGA
+- Sintaxe PowerShell verificada por AST nos scripts principal, grafico e diagnostico.
+- Acoes da interface comparadas com o ValidateSet e o despacho do script principal.
+- Funcoes criticas e comandos de calibracao TSPL/ZPL conferidos estaticamente.
+- Estrutura do pacote ZIP extraida e analisada novamente antes da entrega.
+- Links oficiais de suporte revisados nas paginas dos fabricantes.
+
+LIMITES DO TESTE AUTOMATICO
+- Rotinas destrutivas ou administrativas nao foram executadas na maquina de desenvolvimento.
+- UAC, Firewall, usuarios, credenciais, permissoes e remocao de drivers exigem teste controlado.
+- Impressao RAW, calibracao, sensores e ribbon exigem uma impressora fisica compativel.
+- O diagnostico confirma o caminho ate a fila/porta; a resposta fisica deve ser confirmada pelo tecnico.

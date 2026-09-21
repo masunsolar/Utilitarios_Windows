@@ -1,0 +1,124 @@
+UTILITARIO UNIWARE v0.3.28 - CONFIGURACAO E CALIBRACAO DE ETIQUETAS
+
+COMO TESTAR
+1. Extraia todo o conteudo do ZIP.
+2. Clique com o botao direito em Abrir-Utilitarios.bat.
+3. Escolha Executar como administrador.
+4. Use o painel para abrir as ferramentas.
+
+O QUE MUDOU
+- Novo Validar-Ambiente.bat para diagnosticar o computador antes do atendimento.
+- Verificacao de administrador, PowerShell, Spooler, modulos, Winget e filas instaladas.
+- Classificacao de conexoes USB/COM, TCP/IP e compartilhadas, com teste TCP 9100.
+- Teste dos principais enderecos de download e relatorio em LOGS\VALIDACAO.
+- Links provisiorios de Canon, Kyocera, Ricoh e Pantum trocados pelos portais oficiais.
+- Manual do Tecnico em DOCX e PDF e notas completas incluidos no pacote.
+- Novo card Calibrar Etiquetadora na pagina Drivers.
+- Guia para o atendente entender GAP, marca preta, papel continuo, ribbon e termica direta.
+- Identificacao das impressoras instaladas, driver, porta e estado da fila.
+- Identificacao automatica de filas provaveis da Xprinter, TOMATE, Zebra, Elgin e Argox.
+- Selecao explicita do modelo antes do envio para impedir o uso do protocolo errado.
+- Configuracao automatica TSPL/TSPL2 para Xprinter e TOMATE.
+- Configuracao e calibracao ZPL para Zebra TLP 2844-Z, GC420, ZD220 e ZD230.
+- Zebra TLP 2844 sem sufixo Z tratada como modelo EPL com calibracao orientada.
+- Configuracao ZPL para Elgin L42, L42 Pro, L42 Pro Full e L42DT.
+- L42DT, GC420d, ZD220d e ZD230d bloqueadas em termica direta sem ribbon.
+- Calibracao orientada para Argox OS-214, OS-214plus, OS-214 Pro e OS-214EX.
+- Acesso direto as preferencias do driver nos modelos de calibracao manual.
+- Perfis laboratoriais de 40 a 60 mm de largura e 25 a 40 mm de altura.
+- Tamanho personalizado dentro do intervalo usado nos laboratorios.
+- Configuracao de GAP, marca preta ou papel continuo.
+- Configuracao de termica direta sem ribbon ou transferencia termica com ribbon.
+- Ajustes de velocidade, intensidade e orientacao.
+- Confirmacao numerica antes de enviar qualquer comando a impressora.
+- Calibracao TSPL por GAPDETECT/BLINEDETECT e ZPL por ~JC.
+- Etiqueta de teste gerada no protocolo correto para os modelos automaticos.
+- Registro das configuracoes e erros em LOGS\ETIQUETADORAS.
+- O pacote Xprinter deixou de ficar incorporado ao ZIP do utilitario.
+- Download sob demanda pela GitHub Release publicada no repositorio Etiquetadoras.
+- Validacao do cabecalho ZIP antes da extracao.
+- O executavel extraido continua sendo validado pelo SHA-256 e pela assinatura digital.
+- Nova marca XPRINTERS dentro do menu Etiquetadoras.
+- Driver universal Seagull 2023.2 baixado sob demanda pela internet.
+- Compatibilidade interna com aproximadamente 300 modelos Xprinter.
+- Exemplos exibidos: XP-410B, XP-420B, XP-450B, XP-460B, XP-480B, XP-D361B, XP-D461B, XP-T4501B e XP-TT428B.
+- O utilitario confere o SHA-256 e a assinatura digital da Seagull Scientific antes de abrir o instalador.
+- Nova marca TOMATE dentro do menu Etiquetadoras.
+- Novo submenu de modelos TOMATE, preparado para receber outros equipamentos.
+- Modelo TOMATE MDK-20744 adicionado com o pacote informado pelo usuario.
+- Download com barra de progresso, extracao do ZIP e abertura do instalador encontrado.
+- Menus especificos de HP, Epson, Brother e Lexmark em Drivers de impressoras graficas.
+- Links oficiais adicionados para Epson L3150 e L3250.
+- Links oficiais adicionados para Brother DCP-T720DW e DCP-L2540DW.
+- Link oficial adicionado para Lexmark MX510de / familia MX510.
+- Links oficiais adicionados para HP LaserJet Pro P1102w e HP Laser serie 408 / 408dn.
+- As paginas dos fabricantes permitem escolher o pacote correto para Windows 10 ou Windows 11.
+- Nova interface grafica com navegacao lateral.
+- Conteudo reposicionado para nao ficar escondido atras da barra lateral.
+- Cartoes e paineis redimensionados conforme o tamanho da janela.
+- Ajuste automatico para diferentes escalas de tela do Windows.
+- Remocao separada de impressora instalada e driver do fabricante.
+- Ao remover uma impressora, o driver e a porta sao preservados.
+- Drivers usados por alguma impressora ficam bloqueados para remocao.
+- Confirmacao obrigatoria digitando REMOVER antes de cada alteracao.
+- Registro das remocoes e erros em LOGS\REMOCAO_IMPRESSORAS.
+- Download do Unilab RustDesk pelo endereco oficial informado.
+- Execucao do RustDesk com prioridade alta.
+- Desativacao completa do UAC com backup dos valores anteriores.
+- Gerenciamento dos perfis Domain, Private e Public do Firewall.
+- Criacao e validacao de regras TCP/UDP para portas, listas e intervalos.
+- Verificacao separada da regra de Firewall e do programa que escuta a porta.
+- Confirmacao numerica: 1 executa e 0 cancela nas alteracoes de UAC e Firewall.
+- Motivo detalhado quando uma confirmacao e cancelada ou digitada incorretamente.
+- Diagnostico de administrador, modulo NetSecurity e servicos BFE/MpsSvc.
+- Mensagem do Windows, categoria, ID e HRESULT em falhas reais.
+- Sugestoes de solucao para permissao, servicos e politicas de dominio.
+- Altura dos cartoes calculada automaticamente conforme o texto e a fonte.
+- Linhas do painel de atalhos reposicionadas para impedir sobreposicao.
+- Paineis inferiores alinhados mesmo quando um texto ocupa mais linhas.
+- Nova secao UnilabNuvem com download e execucao do instalador 0.1.55.
+- Nova secao Utilitarios na barra lateral.
+- Unilab RustDesk movido de Computador para Utilitarios.
+- Painel de Senhas com Painel Lancador, UniSenhas, UniCheckin e TesteBotoeira.
+- Opcao Baixar todos: executaveis salvos sem abrir e ZIPs extraidos.
+- Validacao do cabecalho de arquivos EXE e ZIP antes de executar ou extrair.
+- Painel Lancador atualizado para pacote ZIP do GitHub.
+- UniSenhas e UniCheckin atualizados para anexos do GitHub.
+- TesteBotoeira atualizado para pacote ZIP do GitHub.
+- Os quatro itens do Painel de Senhas agora sao validados e extraidos.
+- Barra de progresso que atualiza sempre na mesma linha do console.
+- Nome, percentual, tamanho baixado/total e velocidade reunidos nessa linha.
+- Ao concluir, a mesma linha mostra 100% e o tempo total.
+- Blocos de transferencia ampliados de 64 KB para 1 MB.
+- Gravacao em disco configurada para acesso sequencial e buffer de 1 MB.
+- Atualizacao visual reduzida para evitar que o console limite a transferencia.
+- Conexao persistente e parametros TCP ajustados para arquivos grandes.
+- Na criacao do usuario Unilabimp, permite usar a senha sugerida ou informar outra.
+- A senha personalizada e digitada de forma oculta e exige confirmacao.
+- Em usuario existente, permite manter a senha ou redefine-la pelas mesmas opcoes.
+- A senha sugerida permanece ofuscada em Base64 e nunca e gravada nos logs.
+- O usuario Unilabimp e habilitado e incluido no grupo padrao de usuarios locais.
+- Usuario/Spooler mantido como acesso para criacao do Unilabimp e credenciais.
+- Criacao de credencial persistente do Windows informando apenas o computador remoto.
+- A credencial usa automaticamente o usuario remoto Unilabimp e a senha sugerida.
+- Validacao da credencial pelo Gerenciador de Credenciais depois da gravacao.
+- Novo card vermelho independente para listar todos os usuarios locais e selecionar quais remover.
+- O usuario conectado e as contas internas do Windows ficam identificados e protegidos.
+- Controle total aplicado em System32\spool\PRINTERS para Unilabimp e Todos/Everyone.
+- Identidades localizadas por SID para funcionar em Windows em portugues e ingles.
+- Permissoes herdadas por arquivos e subpastas e validadas depois da aplicacao.
+- A remocao exige a confirmacao REMOVER e preserva as pastas de perfil.
+- Arquivos parciais sao removidos automaticamente quando o download falha.
+- Acoes agrupadas em Impressoras, Drivers, Computador e Historico.
+- Atalhos principais na tela inicial.
+- Exibicao do estado do spooler e informacoes basicas da maquina.
+- Cada rotina abre em uma janela de console propria para preservar o fluxo atual.
+
+COMPATIBILIDADE
+- Todas as rotinas da versao v0.3.8 foram mantidas.
+- Abrir-Menu-Classico.bat continua oferecendo o menu anterior.
+
+OBSERVACAO
+Esta versao serve para validar o novo desenho. Algumas etapas ainda usam perguntas
+no console porque fazem parte das rotinas originais.
+

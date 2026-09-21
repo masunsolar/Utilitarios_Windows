@@ -1,0 +1,61 @@
+UTILITARIOS UNIWARE v0.3.28
+RELATORIO DE VALIDACAO
+
+DATA: 21/09/2026
+
+APROVADO - ESTRUTURA E CODIGO
+- Utilitarios_Uniware.PS1 analisado pelo parser do PowerShell sem erros.
+- Utilitarios_Uniware_GUI.ps1 analisado pelo parser do PowerShell sem erros.
+- Validar-Ambiente.ps1 analisado pelo parser do PowerShell sem erros.
+- Todas as acoes dos cards da interface possuem despacho correspondente no script principal.
+- Nenhum endereco provisiorio com o padrao seu-link permanece no codigo.
+- Versao v0.3.28 conferida no script principal, interface e inicializador.
+
+APROVADO - RECURSOS CONFERIDOS ESTATICAMENTE
+- Busca de impressoras graficas, cupom e dispositivos USB/COM.
+- Instalacao TCP/IP e teste RAW 9100.
+- Criacao do usuario Unilabimp, senha sugerida/personalizada e credencial do Windows.
+- Permissao na pasta System32\spool\PRINTERS por SID para usuario e Todos/Everyone.
+- Remocao separada de fila e driver e remocao seletiva de usuarios.
+- RustDesk, Unilab Nuvem, Painel de Senhas e Winget.
+- UAC, perfis do Firewall, regras TCP/UDP e diagnosticos dos servicos.
+- Manutencao e registros de historico.
+- TSPL: SET RIBBON, SIZE, GAP/BLINE, GAPDETECT e BLINEDETECT.
+- ZPL: ^MN, ^MT, ^PW, ^LL, ^PR, ~SD, ^PO e ~JC.
+- Fluxo manual para Zebra TLP 2844 EPL e Argox OS-214 PPLA/PPLB.
+- Bloqueio de ribbon nos modelos exclusivamente termicos diretos.
+
+APROVADO - DIAGNOSTICO
+- Validar-Ambiente.ps1 executado no modo sem internet e sem alteracoes no Windows.
+- O script identificou corretamente falta de elevacao, estado do Spooler,
+  modulos PowerShell, Winget e indisponibilidade de consulta de filas.
+- As falhas foram registradas como diagnostico e o script chegou ao resumo final.
+- O tecnico pode executar o modo completo em uma maquina de atendimento.
+
+APROVADO - DOCUMENTACAO
+- Manual do Tecnico criado em DOCX.
+- Manual equivalente criado em PDF A4 com 6 paginas.
+- Todas as 6 paginas do PDF foram renderizadas e inspecionadas visualmente.
+- Nao foram encontrados cortes, sobreposicoes ou tabelas ilegíveis no PDF final.
+- Notas completas da versao adicionadas em arquivo TXT.
+
+APROVADO - LINKS DE SUPORTE
+- HP, Epson, Brother, Canon, Lexmark, Kyocera, Ricoh, Pantum, Zebra e Elgin
+  foram direcionadas para paginas ou pacotes de suporte correspondentes.
+- Canon, Kyocera, Ricoh e Pantum deixaram de usar enderecos provisiorios.
+- O pacote v0.3.27 publicado na Release Utilitarios foi conferido com o mesmo
+  SHA-256 do arquivo local usado como base.
+
+VALIDACAO EXIGIDA EM EQUIPAMENTO
+- Impressao e calibracao fisica TSPL e ZPL.
+- Sensores GAP e marca preta, papel continuo, ribbon e termica direta.
+- Calibracao por FEED da Argox OS-214 e Zebra TLP 2844 EPL.
+- Conexoes USB, TCP/IP, LPR, IPP e filas compartilhadas.
+- UAC, Firewall, usuarios, credenciais, ACL do Spooler e remocoes.
+- Instaladores e downloads em uma rede de cliente sem bloqueio de proxy.
+
+MOTIVO
+Esses testes alteram o Windows ou dependem de impressora, driver, firmware,
+porta, midia, ribbon, rede e permissoes presentes no local do atendimento.
+O pacote inclui Validar-Ambiente.bat e uma lista de verificacao no manual para
+registrar cada teste real antes de classificar a versao como homologada.
